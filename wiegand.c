@@ -46,7 +46,7 @@ PI_THREAD (waitForData0)
   
   for (;;)
   {
-    if (waitForInterrupt (D0_PIN, -1) > 0)	// Got it
+    if (waitForInterrupt (D8_PIN, -1) > 0)	// Got it
     {
 		//printf ("0") ; fflush (stdout) ;
 		bitCount++;
@@ -64,7 +64,7 @@ PI_THREAD (waitForData1)
   
   for (;;)
   {
-	if (waitForInterrupt (D1_PIN, -1) > 0)	// Got it
+	if (waitForInterrupt (D9_PIN, -1) > 0)	// Got it
     {
 		//printf ("1") ; fflush (stdout) ;
 		databits[bitCount] = 1;
