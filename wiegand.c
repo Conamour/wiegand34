@@ -24,8 +24,8 @@
 #include <stdlib.h>
 #include <wiringPi.h>
 
-#define D8_PIN 0
-#define D9_PIN 1
+#define D0_PIN 3
+#define D1_PIN 5
 
 #define MAX_BITS 100                 // max number of bits 
 #define WIEGAND_WAIT_TIME 300000      // time to wait for another wiegand pulse.  
@@ -46,7 +46,7 @@ PI_THREAD (waitForData0)
   
   for (;;)
   {
-    if (waitForInterrupt (D8_PIN, -1) > 0)	// Got it
+    if (waitForInterrupt (D0_PIN, -1) > 0)	// Got it
     {
 		//printf ("0") ; fflush (stdout) ;
 		bitCount++;
@@ -64,7 +64,7 @@ PI_THREAD (waitForData1)
   
   for (;;)
   {
-	if (waitForInterrupt (D9_PIN, -1) > 0)	// Got it
+	if (waitForInterrupt (D1_PIN, -1) > 0)	// Got it
     {
 		//printf ("1") ; fflush (stdout) ;
 		databits[bitCount] = 1;
