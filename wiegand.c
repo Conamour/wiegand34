@@ -24,8 +24,8 @@
 #include <stdlib.h>
 #include <wiringPi.h>
 
-#define D0_PIN 8
-#define D1_PIN 9
+#define D0_PIN 0
+#define D1_PIN 1
 
 #define MAX_BITS 100                 // max number of bits 
 #define WIEGAND_WAIT_TIME 300000      // time to wait for another wiegand pulse.  
